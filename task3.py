@@ -44,7 +44,7 @@ def get_operator(n_qubits,unitary, target_qubits):
 
     #Two qubits Control-X gate
 
-    if (unitary=='CX'):
+    if (unitary=='cx'):
 
         #Define Pojectors
         #|0><0|
@@ -115,9 +115,9 @@ def get_operator(n_qubits,unitary, target_qubits):
 
         #Possible 1-qubit gates to apply
         my_gate= {
-                "X":X,
-                "H":H,
-                "Z":Z
+                "x":X,
+                "h":H,
+                "z":Z
         }
 
         #Define the 1-qubit gate operatos doing Kronecker product with 2x2 Identity matrices and the 2x2 matrix that represents the gate
@@ -235,7 +235,7 @@ def get_counts(state_vector, num_shots):
 my_qpu=get_ground_state(8)
 
 #Configure program selecting the gates to apply
-my_cir=[{"gate":"H","target":[0]}]
+my_cir=[{"gate":"h","target":[0]}]
 
 #num_shots
 num_shots=1000
